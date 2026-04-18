@@ -13,12 +13,7 @@ Kirana Scout is a smart platform designed to help users discover nearby kirana (
 🏗️ Tech Stack
 Frontend
 React 
-Backend
-Node.js
-Express.js
-Other Tools
 Git & GitHub
-REST APIs
 
 ⚙️ Installation & Setup
 1. Clone the repository
