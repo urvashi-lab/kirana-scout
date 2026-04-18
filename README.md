@@ -38,6 +38,7 @@ npm install
 npm run dev
 
 📌 Use Cases
+
 Find nearby grocery stores quickly
 
 Check product availability before visiting
@@ -45,6 +46,7 @@ Check product availability before visiting
 Help local दुकानदार go digital
 
 Improve supply chain visibility
+
 
 
 🌱 Future Improvements
@@ -56,6 +58,7 @@ Improve supply chain visibility
 📦 Real-time inventory tracking
 
 💳 Online ordering & payments
+
 
 👩‍💻 Author
 
