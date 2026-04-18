@@ -5,17 +5,26 @@ Kirana Scout is a smart platform designed to help users discover nearby kirana (
 It aims to bridge the gap between traditional small दुकाने and modern digital convenience.
 
 🚀 Features
+
 🔍 Search and discover nearby kirana stores
+
 📦 View product availability
+
 📊 Smart insights for better decision-making
+
 🧭 Location-based recommendations
+
 👤 User authentication system
+
 💬 Chatbot support (optional)
+
 
 🏗️ Tech Stack
 
 Frontend:React
+
 Tools & Version Control:
+
 Git
 GitHub
 
@@ -30,15 +39,24 @@ npm run dev
 
 📌 Use Cases
 Find nearby grocery stores quickly
+
 Check product availability before visiting
+
 Help local दुकानदार go digital
+
 Improve supply chain visibility
 
+
 🌱 Future Improvements
+
 🧠 AI-based demand prediction
+
 📱 Mobile app integration
+
 📦 Real-time inventory tracking
+
 💳 Online ordering & payments
+
 👩‍💻 Author
 
 Urvashi Patil
