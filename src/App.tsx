@@ -12,7 +12,8 @@ import UploadPage from "./pages/UploadPage";
 import AnalysisResults from "./pages/AnalysisResults";
 import ShopDetail from "./pages/ShopDetail";
 import AdminPage from "./pages/AdminPage";
-import LoginPage from "./pages/LoginPage";
+import ShopOwnerLogin from "./pages/ShopOwnerLogin";
+import LoanOfficerLogin from "./pages/LoanOfficerLogin";
 import ShopOwnerUpload from "./pages/ShopOwnerUpload";
 import ShopOwnerStatus from "./pages/ShopOwnerStatus";
 import NotFound from "./pages/NotFound";
@@ -25,7 +26,10 @@ function AppRoutes() {
   if (!isAuthenticated) {
     return (
       <Routes>
-        <Route path="*" element={<LoginPage />} />
+        <Route path="/login/shop-owner" element={<ShopOwnerLogin />} />
+        <Route path="/login/loan-officer" element={<LoanOfficerLogin />} />
+        {/* Redirect any unknown path to shop owner login as fallback */}
+        <Route path="*" element={<Navigate to="/login/shop-owner" replace />} />
       </Routes>
     );
   }
@@ -52,6 +56,8 @@ function AppRoutes() {
         <Route path="/shop/:id" element={<ShopDetail />} />
         <Route path="/admin/sku" element={<AdminPage />} />
         <Route path="/admin/config" element={<AdminPage />} />
+        {/* Redirect login routes to dashboard if already authenticated */}
+        <Route path="/login/*" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </DashboardLayout>

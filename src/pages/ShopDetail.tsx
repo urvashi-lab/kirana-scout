@@ -40,18 +40,30 @@ export default function ShopDetail() {
         ))}
       </div>
 
+   
       {/* Image Gallery */}
       <div className="glass-card rounded-2xl p-5">
         <h3 className="text-sm font-heading font-semibold mb-3 flex items-center gap-2">
           <Image className="h-4 w-4" /> Image Gallery
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {["Shelf Front", "Shelf Side", "Counter", "Exterior"].map((label) => (
-            <div key={label} className="aspect-square rounded-xl bg-muted flex items-center justify-center">
-              <div className="text-center">
-                <Image className="h-6 w-6 mx-auto text-muted-foreground/40 mb-1" />
-                <span className="text-[10px] text-muted-foreground">{label}</span>
-              </div>
+          {[
+            { label: "Shelf Front", src: "/images/kirana1.jpg" },
+            { label: "Shelf Side", src: "/images/kirana2.jpg" },
+            { label: "Counter", src: "/images/kirana3.jpg" },
+            { label: "Exterior", src: "/images/kirana4.webp" },
+          ].map((item) => (
+            <div key={item.label} className="aspect-square rounded-xl overflow-hidden bg-muted">
+              <img
+                src={item.src}
+                alt={item.label}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback if image not found
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+              <span className="text-[10px] text-muted-foreground block text-center mt-1">{item.label}</span>
             </div>
           ))}
         </div>

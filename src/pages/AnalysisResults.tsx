@@ -130,27 +130,15 @@ export default function AnalysisResults() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Shelf Image with YOLO overlay */}
             <div className="glass-card rounded-2xl p-5">
-              <h3 className="text-sm font-heading font-semibold mb-3">Shelf Analysis (YOLO Detection)</h3>
-              <div className="aspect-video rounded-xl bg-muted relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
-                {/* Mock bounding boxes */}
-                <div className="absolute top-[10%] left-[5%] w-[25%] h-[30%] border-2 border-risk-low rounded-md">
-                  <span className="absolute -top-4 left-0 bg-risk-low text-card text-[8px] px-1 py-0.5 rounded">FMCG (12)</span>
-                </div>
-                <div className="absolute top-[15%] left-[35%] w-[28%] h-[35%] border-2 border-primary rounded-md">
-                  <span className="absolute -top-4 left-0 bg-primary text-primary-foreground text-[8px] px-1 py-0.5 rounded">Beverages (8)</span>
-                </div>
-                <div className="absolute top-[50%] left-[10%] w-[35%] h-[25%] border-2 border-risk-medium rounded-md">
-                  <span className="absolute -top-4 left-0 bg-risk-medium text-card text-[8px] px-1 py-0.5 rounded">Snacks (15)</span>
-                </div>
-                <div className="absolute top-[45%] right-[8%] w-[22%] h-[40%] border-2 border-risk-low rounded-md">
-                  <span className="absolute -top-4 left-0 bg-risk-low text-card text-[8px] px-1 py-0.5 rounded">Personal Care (6)</span>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Package className="h-8 w-8 text-muted-foreground/30" />
-                </div>
-              </div>
+            <h3 className="text-sm font-heading font-semibold mb-3">Shelf Analysis (YOLO Detection)</h3>
+            <div className="aspect-video rounded-xl bg-muted relative overflow-hidden">
+              <img
+                src="/images/yolo analysis.png"
+                alt="Shelf Analysis YOLO Detection"
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
+          </div>
 
             {/* SKU Distribution */}
             <div className="glass-card rounded-2xl p-5">
@@ -186,14 +174,18 @@ export default function AnalysisResults() {
         <TabsContent value="geo" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="glass-card rounded-2xl p-5">
-              <h3 className="text-sm font-heading font-semibold mb-3">Location Intelligence</h3>
-              <div className="h-48 rounded-xl bg-muted flex items-center justify-center relative">
-                <MapPin className="h-6 w-6 text-primary" />
-                <div className="absolute bottom-3 left-3 right-3 bg-card/90 backdrop-blur rounded-lg p-2 text-xs">
-                  <span className="font-semibold">19.0760° N, 72.8777° E</span> • Andheri West, Mumbai
-                </div>
+            <h3 className="text-sm font-heading font-semibold mb-3">Location Intelligence</h3>
+              <div className="h-60 rounded-xl bg-muted relative overflow-hidden">
+                <img
+                  src="/images/Andheri-West.png"
+                  alt="Location Intelligence Map"
+                  className="w-full h-full object-cover rounded-xl"
+                />
               </div>
-            </div>
+              <p className="text-xs text-muted-foreground mt-2">
+                  <span className="font-semibold text-foreground">19.0760° N, 72.8777° E</span> • Andheri West, Mumbai
+                </p>
+          </div>
             <div className="space-y-4">
               {[
                 { label: "Geo Footfall Score", value: "0.78", desc: "High pedestrian traffic area" },

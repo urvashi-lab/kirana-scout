@@ -121,18 +121,12 @@ export default function DashboardOverview() {
             <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-risk-high" /> High Risk</span>
           </div>
         </div>
-        <div className="h-52 rounded-xl bg-muted flex items-center justify-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
-          <div className="flex flex-col items-center gap-2 text-muted-foreground">
-            <MapPin className="h-8 w-8" />
-            <span className="text-xs">Map view — connect Google Maps API for live data</span>
-          </div>
-          {/* Mock pins */}
-          <div className="absolute top-12 left-1/4 h-3 w-3 rounded-full bg-risk-low shadow-md animate-pulse" />
-          <div className="absolute top-20 left-1/2 h-3 w-3 rounded-full bg-risk-medium shadow-md animate-pulse" />
-          <div className="absolute top-16 right-1/3 h-3 w-3 rounded-full bg-risk-high shadow-md animate-pulse" />
-          <div className="absolute bottom-16 left-1/3 h-3 w-3 rounded-full bg-risk-low shadow-md" />
-          <div className="absolute bottom-20 right-1/4 h-3 w-3 rounded-full bg-risk-low shadow-md" />
+        <div className="h-60 rounded-xl bg-muted relative overflow-hidden">
+          <img
+            src="/images/Swargate.png"
+            alt="Shop Locations Map"
+            className="w-full h-full object-cover rounded-xl"
+          />
         </div>
       </div>
 
